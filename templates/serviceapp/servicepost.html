@@ -1,0 +1,50 @@
+{% extends 'Navbar/servicenavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<h1 align=>This is Service Post from the Service APP</h1>
+<div>
+    <div class="container mt-5">
+        <h3>Service Details Form</h3>
+        <form method="post" action="{% url 'serviceapp:add_job_details' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="workTitle">Work Title</label>
+                <input type="text" class="form-control" name="workTitle" id="workTitle" placeholder="Enter the work Title">
+            </div>
+            <div class="form-group">
+                <label for="salaryOffered">Salary offered</label>
+                <input type="text" class="form-control" name="salaryOffered" id="salaryOffered" placeholder="salaryOffered">
+            </div>
+            <div class="form-group">
+                <label for="jobType">job Type</label>
+                <select class="form-control" name="jobType" id="jobType">
+                    <option value="fullTime">Full-Time</option>
+                    <option value="partTime">Part-Time</option>
+                    <option value="contract">Contract</option>
+                </select>
+                            <div class="form-group">
+                                <label for="benefits">Benefits </label>
+                                <textarea class="form-control" name="benefits" id="benefits" rows="1" placeholder="Enter the benefits"></textarea>
+                            </div>
+                <div class="form-group">
+                <label for="education">Education</label>
+                <input type="text" class="form-control" name="education" id="education" placeholder="Enter the education">
+            </div>
+                <div class="form-group">
+                <label for="workLocation">work Location</label>
+                <input type="text" class="form-control" name="workLocation" id="workLocation" placeholder="Enter the workLocation">
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Post the Service</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

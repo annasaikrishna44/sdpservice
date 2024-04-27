@@ -1,0 +1,45 @@
+{% extends 'Navbar/customernavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<h1 align=>This page is to view all the available services for applying</h1>
+<div class="card" style="width: 70rem;">
+  <img src="{% static 'images/Engine.jpg' %}" class="card-img-top" alt="Engine">
+  <div class="card-body">
+    <h5 class="card-title">Engine Repair Service</h5>
+    <p class="card-text">Engine repair services are essential for keeping vehicles and machinery in top condition.</p>
+    <a href="#" class="btn btn-primary">Apply for this Job</a>
+  </div>
+</div>
+<div class="card" style="width: 70rem;">
+  <img src="{% static 'images/Tyre.jpg' %}" class="card-img-right-side" alt="Tyre">
+  <div class="card-body">
+    <h5 class="card-title">Tyre Repair Service</h5>
+    <p class="card-text">Tyre repair services are an integral part of vehicle maintenance, ensuring that tires remain in optimal condition for safety, efficiency, and performance. </p>
+    <a href="#" class="btn btn-primary">Apply for this Job</a>
+  </div>
+</div>
+<div class="card" style="width: 70rem;">
+  <img src="{% static 'images/Painting.jpg' %}" class="card-img-right" alt="Tyre">
+  <div class="card-body">
+    <h5 class="card-title">Painting Service</h5>
+    <p class="card-text">Automotive painting services are essential for maintaining the aesthetic appeal and protective layer of a vehicle. Whether it's repairing scratches, applying a new coat of paint, or customizing the vehicle's appearance, professional painting services play a crucial role. </p>
+    <a href="#" class="btn btn-primary">Apply for this Job</a>
+  </div>
+</div>
+<div class="card" style="width: 70rem;">
+  <img src="{% static 'images/Brake.jpg' %}" class="card-img-right" alt="Tyre">
+  <div class="card-body">
+    <h5 class="card-title">Brake Service</h5>
+    <p class="text">Regular brake service is essential for maintaining the safety and reliability of your vehicle. Whether addressing routine maintenance, replacing components, or upgrading the braking system, timely attention to the brake system contributes to overall driving safety and longevity of brake components.</p>
+    <a href="#" class="btn btn-primary">Apply for this Job</a>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>

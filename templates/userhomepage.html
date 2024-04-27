@@ -1,0 +1,38 @@
+{% extends 'Navbar/customernavbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<div>
+    <h2 style="color: #ea3789" align="center"> This is User Home Page</h2>
+</div>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/Userbackground2.jpg' %}" class="d-block w-100" alt="Userbackground2">
+      <div class="carousel-caption d-none d-md-block" align="center">
+          <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/Userbackground.jpg' %}" class="card-img-top" alt="Userbackground">
+  <div class="card-body">
+    <h5 class="card-title">Head Light Repair</h5>
+    <p class="card-text">
+Headlights are a crucial component of a vehicle's lighting system, providing illumination for driving in low-light conditions or at night.</p>
+    <a href="{% url 'viewservices' %}" class="btn btn-primary">Book Service</a>
+  </div>
+</div>
+        <h5>Service HUB</h5>
+          <center>
+              <p align="center">It is designed to optimize and streamline the delivery of services, ensuring that customer needs and expectations are met efficiently.</p>
+          <p>Service management systems are commonly applied in various industries, including IT, telecommunications, healthcare, and more.</p>
+          </center>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>
